@@ -25,7 +25,6 @@ setup(
     maintainer_email='mike@wimblerobotics.com',
     description='ROS2 node for controlling a servo gripper via PWM on Raspberry Pi 5.',
     license='Apache-2.0',
-    tests_require=['pytest'],
     entry_points={
         'console_scripts': [
             'pi_gripper_node = pi_gripper.pi_gripper_node:main',
