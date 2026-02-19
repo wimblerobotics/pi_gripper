@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
+<!-- SPDX-FileCopyrightText: 2026 Michael Wimble <mike@wimblerobotics.com> -->
+<!-- SPDX-License-Identifier: Apache-2.0 -->
 <package format="3">
-  <name>sigyn_testicle_twister</name>
+  <name>pi_gripper</name>
   <version>0.0.1</version>
-  <description>ROS2 package for controlling a gripper servo via PWM on Raspberry Pi.</description>
-  <maintainer email="mike@wimblerobotics.com">Your Name</maintainer>
-  <license>MIT</license>
+  <description>ROS2 node for controlling a servo gripper via PWM on Raspberry Pi 5.</description>
+  <maintainer email="mike@wimblerobotics.com">Michael Wimble</maintainer>
+  <license>Apache-2.0</license>
   <buildtool_depend>ament_python</buildtool_depend>
   <exec_depend>rclpy</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>

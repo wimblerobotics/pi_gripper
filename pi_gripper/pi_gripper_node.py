@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Michael Wimble <mike@wimblerobotics.com>
+# SPDX-License-Identifier: Apache-2.0
+
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
@@ -5,9 +8,9 @@ from .pwm_driver import PWMDriver
 from .pwm_software_driver import SoftwarePWMDriver
 from .pwm_pca9685_driver import PCA9685PWMDriver
 
-class SigynTesticleTwisterNode(Node):
+class PiGripperNode(Node):
     def __init__(self):
-        super().__init__('sigyn_testicle_twister_node')
+        super().__init__('pi_gripper_node')
         
         # PWM driver selection - PCA9685 is now the default for best compatibility
         pwm_driver_type = self.declare_parameter('pwm_driver_type', 'pca9685').value
@@ -55,7 +58,7 @@ class SigynTesticleTwisterNode(Node):
         
         self.subscription = self.create_subscription(
             Twist,
-            'cmd_vel_testicle_twister',
+            'cmd_vel_pi_gripper',
             self.listener_callback,
             10)
         self.period_ns = 20000000  # 20ms period (50Hz)
@@ -83,7 +86,7 @@ class SigynTesticleTwisterNode(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    node = SigynTesticleTwisterNode()
+    node = PiGripperNode()
     try:
         rclpy.spin(node)
     except KeyboardInterrupt:

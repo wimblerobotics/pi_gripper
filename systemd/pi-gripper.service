@@ -1,0 +1,20 @@
+[Unit]
+Description=Sigyn Pi Gripper ROS2 Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=ros
+Group=ros
+WorkingDirectory=/home/ros
+Environment="RMW_IMPLEMENTATION=rmw_cyclonedds_cpp"
+Environment="CYCLONEDDS_URI=file:///etc/cyclonedds.xml"
+ExecStart=/home/ros/sigyn_vision_ws/src/pi_gripper/scripts/start_service.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

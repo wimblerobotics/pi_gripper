@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 Michael Wimble <mike@wimblerobotics.com>
+# SPDX-License-Identifier: Apache-2.0
+
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
 from launch.substitutions import LaunchConfiguration
@@ -57,8 +60,8 @@ def generate_launch_description():
         
         # Main node
         Node(
-            package='sigyn_testicle_twister',
-            executable='sigyn_testicle_twister_node',
+            package='pi_gripper',
+            executable='pi_gripper_node',
             output='screen',
             parameters=[{
                 'pwm_driver_type': LaunchConfiguration('pwm_driver_type'),

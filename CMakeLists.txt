@@ -1,6 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Michael Wimble <mike@wimblerobotics.com>
+# SPDX-License-Identifier: Apache-2.0
+
 # CMakeLists.txt for ament_python
 cmake_minimum_required(VERSION 3.8)
-project(sigyn_testicle_twister)
+project(pi_gripper)
 
 # Find dependencies
 find_package(ament_cmake REQUIRED)

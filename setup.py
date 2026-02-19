@@ -1,6 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Michael Wimble <mike@wimblerobotics.com>
+# SPDX-License-Identifier: Apache-2.0
+
 from setuptools import setup
 
-package_name = 'sigyn_testicle_twister'
+package_name = 'pi_gripper'
 
 setup(
     name=package_name,
@@ -10,7 +13,7 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages', ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
-        ('share/' + package_name + '/launch', ['launch/sigyn_testicle_twister.launch.py']),
+        ('share/' + package_name + '/launch', ['launch/pi_gripper.launch.py']),
     ],
     install_requires=[
         'setuptools',
@@ -20,12 +23,12 @@ setup(
     zip_safe=True,
     maintainer='Michael Wimble',
     maintainer_email='mike@wimblerobotics.com',
-    description='ROS2 package for controlling a gripper servo via PWM on Raspberry Pi.',
-    license='MIT',
+    description='ROS2 node for controlling a servo gripper via PWM on Raspberry Pi 5.',
+    license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'sigyn_testicle_twister_node = sigyn_testicle_twister.sigyn_testicle_twister_node:main',
+            'pi_gripper_node = pi_gripper.pi_gripper_node:main',
         ],
     },
 )

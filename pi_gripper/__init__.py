@@ -1,7 +1,2 @@
 # SPDX-FileCopyrightText: 2026 Michael Wimble <mike@wimblerobotics.com>
 # SPDX-License-Identifier: Apache-2.0
-
-[develop]
-script_dir=$base/lib/pi_gripper
-[install]
-install_scripts=$base/lib/pi_gripper
